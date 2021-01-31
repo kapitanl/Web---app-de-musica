@@ -1,0 +1,232 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    text-align: center;
+    background: rgb(46, 46, 46);
+    font-family:'Josefin Sans', sans-serif;
+    font-size: 15px;
+    color: rgb(110, 214, 218);
+    margin: auto;
+}
+
+header{
+    text-align: left;
+    margin-left: 2%;
+    padding: 5%;
+
+
+}
+.Titulo, b{
+    display: inline-block;
+
+}
+.boton-login a{
+    color: black;
+    text-decoration: none;
+    transition: color 0.5s, font-size;
+}
+.boton-login a:hover{
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+
+}
+.Titulo{
+    float: left;;
+}
+.boton-login{
+    float: right;
+    padding: 7px;
+    background: rgb(0, 153, 153);
+    box-shadow: 0px 5px 10px  rgb(0, 0, 0);
+    border-radius: 20px 10px;
+    transition: background 0.5s, box-shadow 0.5s;
+}
+.boton-login:hover{
+    background:  rgba(0, 100, 100, 0.596);
+    box-shadow: 0px 0px 0px  rgba(0, 0, 0, 0);
+}
+.nav_home{
+    margin: 15px;
+    background: rgba(0, 0, 0, 0.329);
+    padding: 10px;
+    border-radius: 15px 50px ;
+    width: 50%;
+    margin: auto;
+    box-shadow: 10px 10px 20px black;
+}
+
+.nav_reproductor{
+    background: rgba(0, 0, 0, 0.329);
+    padding: 10px;
+    border-radius: 15px 50px ;
+    margin: 0 auto;
+    width: 50%;
+    box-shadow: 10px 10px 20px black;
+}
+ul li{
+    list-style: none;
+    display: inline-block;
+    margin-right: 2%;
+    margin-left: 2%;
+    padding: 7px 7px 7px;
+    background: teal;
+    border-radius: 20px;
+    font-family:'Anton', sans-serif;
+    transition: background 0.5s ;
+}
+ul li:hover{
+  background: rgb(0, 78, 78);
+}
+
+ul li a{
+    color: rgb(0, 0, 0);
+    list-style: none;
+    text-decoration: none; 
+    font: 'josefine sans';
+    font-size: 17px;
+    font-family:'Josefin Sans', sans-serif;
+    transition: color 0.5s,;
+
+}
+ul li a:hover{
+    color: rgb(255, 255, 255);
+}
+ol .li-Musica{
+    color: rgb(196, 196, 196);
+    text-decoration: none;
+}
+ol li{
+    text-align: left;
+    margin-left: 5%;
+    margin: 2% 0% 2% ;
+}
+.section_lista_home{
+    background: rgba(0, 0, 0, 0.233);
+    border-radius: 20px;
+    margin: 2%;
+    padding: 1% 5% 2% ;
+    box-shadow: 10px 10px 20px black;
+}
+ol .li-Musica:hover{
+    color: rgb(240, 240, 240);
+}
+ol li{
+    text-align: left;
+    margin-left: 5%;
+    margin: 2% 0% 2% ;
+}
+
+h2{
+    margin: 2%;
+}
+
+
+img{
+    border-radius: 50%;
+    width: 200px;
+    margin: 2%;
+}
+
+
+
+.header-login{
+    text-align: center;
+    margin: 20px;
+    padding-top: 50px;
+ ;
+}
+.Titulo-login{
+    font-size: 40px;
+  
+}
+.section-login{
+    width: 50%;
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.267);
+    margin: auto;
+    padding: 20px;
+
+}
+
+form h2{
+    font-size: 20px;
+    margin: 20px;
+}
+
+.boton-registro{
+    margin: 15px;
+    border-radius: 20px;
+    padding: 5px;
+    background: cadetblue;
+    border: 0;
+    height: 30px;
+    width: 100px;
+    color: black;
+    font-size: 15px;
+}
+
+form input{
+    border: 0;
+    background: rgb(63, 96, 97);
+    width: 200px;
+    height: 20px;
+    padding: 5px 10px;
+    color: blanchedalmond;
+}
+
+.boton-volver{
+    padding: 10px;
+    
+    background: rgb(0, 139, 139);
+    border-radius: 20px;
+   
+}
+
+.boton-volver a{
+     text-decoration: none;
+     color: rgb(0, 0, 0);
+}
+
+.section_reproductor{
+    background: rgba(0, 0, 0, 0.233);
+    border-radius: 20px;
+    margin: 2% 1%;
+    padding: 1% 5% 2% ;
+    width: 55%;
+    float: left;
+    box-shadow: 10px 10px 20px black;
+}
+.aside_barra_lateral{
+    background: rgba(0, 0, 0, 0.233);
+    border-radius: 20px;
+    margin: 2% 1%;
+    padding: 1% 5% 2% ;
+    width: 20%;
+    float: right;
+    box-shadow: 10px 10px 20px black;
+
+
+}
+
+.section_reproductor, .aside_barra_lateral{
+    display: inline-block;
+    margin-top: 5%;
+}
+
+.aside_titulo{
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+
+
+.pie_pagina{
+    padding-top: 20px;
+    clear: both;
+    content: normal;
+    padding: 10px;
+}
+

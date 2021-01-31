@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% load static %}
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+        <title>Reproductor</title>
+        <link rel="stylesheet" href="{% static 'stilos.css' %}">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&display=swap" rel="stylesheet">
+    </head>
+   <body>
+       
+            <header>
+                <h1>All-Music</h1>
+            </header>
+            <nav class="nav_reproductor">
+                <ul>
+                    <li><a href="{% url 'home' %}">Inicio</a> </li>
+                    <li><a href="">Mi musica</a> </li>
+                    <li><a href="">Genero</a> </li>
+                    <li><a href="">Pley list</a> </li>
+                </ul>
+            </nav>
+
+
+                <section class="section_reproductor">
+                        {% for musica in li_musica %}
+                            {% if id_musica == musica.id %}
+                                 <H2>{{musica.nombre_cancion}}</H2>
+                                <img src="{{musica.imagen.url}}" alt="">
+                                 <br>
+                                 <b> <h5>Archivo:   </h5>  </b> <b>  {{musica.url_musica}}</b>
+                                <br>
+                                 <br>
+                                 <audio src="/static/music/{{musica.url_musica}}" controls autoplay >Musica</audio>
+                            {% endif %}
+                        {% endfor %}
+            </section>
+
+                 
+
+             <aside class="aside_barra_lateral">
+                {% for musica in li_musica %}
+                {% if musica.categoria == 'Mejores Música 2021' %}
+                <h2 class="aside_titulo">Mejores Música 2021</h2>
+                <ol>
+                    <li><a class="li-Musica" href="{% url 'reproductor' musica.id %}"> {{musica.nombre_cancion}}</a> </li>
+                </ol>
+                {% elif musica.categoria == 'Mejores Música 2020' %}
+                <h2 class="aside_titulo">Mejores Música 2020</h2>
+                <ol>
+                    <li><a class="li-Musica" href="{% url 'reproductor' musica.id %}"> {{musica.nombre_cancion}}</a> </li>
+                </ol>
+                
+                {% endif %}
+
+            {% endfor %}
+            </aside>
+           
+<div class="pie_pagina">
+     <footer>
+        <h4>&copy; Reproductor Musica 2021</h4>
+    </footer> 
+</div>
+   
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <head>
+            {% load static %}
+            <link rel="preconnect" href="https://fonts.gstatic.com">
+            <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+            <link rel="preconnect" href="https://fonts.gstatic.com">
+            <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+            <title>Musica</title>
+            <link rel="stylesheet" href="{% static 'stilos.css' %}">
+            <link rel="preconnect" href="https://fonts.gstatic.com">
+            <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&display=swap" rel="stylesheet">
+        </head>
+    </head>
+    <body>
+        <div class="header-login">
+
+            <h1 class="Titulo-login">Login</h1>
+
+        </div>
+        <div class="section-login">
+
+        <form action="">
+            <h2>Ingrese un nombre de usuario:</h2>
+            <input type="text" max="20">
+            <h2>Ingrese un correo:</h2>
+            <input type="email" name="correo">
+            <h2>Ingrese una contraseña:</h2>
+            <input type="password">
+            <br>
+            <input class="boton-registro" type="submit" value="Registrate">
+            
+        </form>
+
+        <b class="boton-volver"><a href="{% url 'home' %}">Volver</a></b>
+        </div>
+       
+        <footer>
+            <h4>&copy; A-Music 2021</h4>
+        </footer>
+    </body>
+    
+</html>

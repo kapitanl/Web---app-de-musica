@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        {% load static %}
+            <link rel="preconnect" href="https://fonts.gstatic.com">
+            <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+            <link rel="preconnect" href="https://fonts.gstatic.com">
+            <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+            <title>Musica</title>
+            <link rel="stylesheet" href="{% static 'stilos.css' %}">
+            <link rel="preconnect" href="https://fonts.gstatic.com">
+            <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+            <header>
+                <h1 class="Titulo">All-Music</h1>
+                <b class="boton-login"><a href="{% url 'login' %}">Login</a> </b>
+            </header>
+            <div>
+        <nav class="nav_home">
+            <ul>
+                <li><a href="{% url 'home' %}">Inicio</a> </li>
+                <li><a href="">Mi musica</a> </li>
+                <li><a href="">Genero</a> </li>
+                <li><a href="">Pley list</a> </li>
+            </ul>
+        </nav>
+        <section class="section_lista_home">
+            {% for musica in li_musica %}
+                {% if musica.categoria == 'Mejores Música 2021' %}
+                <h2>Mejores Música 2021</h2>
+                <ol>
+                    <li><a class="li-Musica" href="{% url 'reproductor' musica.id %}"> {{musica.nombre_cancion}}</a> </li>
+                </ol>
+                {% elif musica.categoria == 'Mejores Música 2020' %}
+                <h2>Mejores Música 2020</h2>
+                <ol>
+                    <li><a class="li-Musica" href="{% url 'reproductor' musica.id %}"> {{musica.nombre_cancion}}</a> </li>
+                </ol>
+                
+                {% endif %}
+
+            {% endfor %}
+
+            <ol>
+
+            </ol>
+            
+        </section>
+        </div>
+        
+        <footer>
+            <h4>&copy; A-Music 2021</h4>
+        </footer>
+    </body>
+</html>
