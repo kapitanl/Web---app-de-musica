@@ -23,30 +23,35 @@
             <ul>
                 <li><a href="{% url 'home' %}">Inicio</a> </li>
                 <li><a href="">Mi musica</a> </li>
-                <li><a href="">Genero</a> </li>
+                <li><a href="{% url 'genero' %}">Género</a> </li>
                 <li><a href="">Pley list</a> </li>
             </ul>
         </nav>
         <section class="section_lista_home">
-            {% for musica in li_musica %}
-                {% if musica.categoria == 'Mejores Música 2021' %}
-                <h2>Mejores Música 2021</h2>
+           <h2>Mejores Música 2021</h2>
                 <ol>
-                    <li><a class="li-Musica" href="{% url 'reproductor' musica.id %}"> {{musica.nombre_cancion}}</a> </li>
+                {% for musica in li_musica %}
+                    {% if musica.categoria == 'Mejores Música 2021' %}
+
+                        <li><a class="li-Musica" href="{% url 'reproductor' musica.id %}"> {{musica.nombre_cancion}}</a> </li>
+                
+                    {% endif %}
+
+                {% endfor %}
                 </ol>
-                {% elif musica.categoria == 'Mejores Música 2020' %}
-                <h2>Mejores Música 2020</h2>
+
+            <h2>Mejores Música 2020</h2>
                 <ol>
-                    <li><a class="li-Musica" href="{% url 'reproductor' musica.id %}"> {{musica.nombre_cancion}}</a> </li>
+                {% for musica in li_musica %}
+                    {% if musica.categoria == 'Mejores Música 2020' %}
+
+                        <li><a class="li-Musica" href="{% url 'reproductor' musica.id %}"> {{musica.nombre_cancion}}</a> </li>
+                
+                    {% endif %}
+
+                {% endfor %}
                 </ol>
                 
-                {% endif %}
-
-            {% endfor %}
-
-            <ol>
-
-            </ol>
             
         </section>
         </div>

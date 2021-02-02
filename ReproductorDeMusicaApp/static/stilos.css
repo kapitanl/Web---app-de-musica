@@ -12,6 +12,8 @@ body{
     margin: auto;
 }
 
+/* CABEZERA */
+
 header{
     text-align: left;
     margin-left: 2%;
@@ -103,6 +105,8 @@ ol li{
     margin-left: 5%;
     margin: 2% 0% 2% ;
 }
+
+/* SECCION DEL HOME */
 .section_lista_home{
     background: rgba(0, 0, 0, 0.233);
     border-radius: 20px;
@@ -124,11 +128,6 @@ h2{
 }
 
 
-img{
-    border-radius: 50%;
-    width: 200px;
-    margin: 2%;
-}
 
 
 
@@ -190,6 +189,9 @@ form input{
      color: rgb(0, 0, 0);
 }
 
+
+/* ÁRIA DEL REPRODUCTOR */
+
 .section_reproductor{
     background: rgba(0, 0, 0, 0.233);
     border-radius: 20px;
@@ -199,6 +201,18 @@ form input{
     float: left;
     box-shadow: 10px 10px 20px black;
 }
+
+img{
+    border-radius: 50%;
+    width: 200px;
+    margin: 2%;
+}
+
+.caract_genero{
+    text-decoration: none;
+     color: rgb(196, 196, 196);
+}
+
 .aside_barra_lateral{
     background: rgba(0, 0, 0, 0.233);
     border-radius: 20px;
@@ -230,3 +244,29 @@ form input{
     padding: 10px;
 }
 
+
+
+/*  ÁRIA  GÉNERO  */
+
+.section_genero{
+    background: rgba(0, 0, 0, 0.233);
+    border-radius: 20px;
+    margin: 2%;
+    padding: 1% 5% 2% ;
+    box-shadow: 10px 10px 20px black;
+    
+}
+.section_genero h2{
+    text-align: left;
+}
+
+.section_genero h2 .titulo_genero{
+    text-decoration: none;
+    color: teal;
+    transition: color 0.2s;
+}
+
+.section_genero h2 .titulo_genero:hover{
+
+    color: rgb(0, 163, 163);
+}

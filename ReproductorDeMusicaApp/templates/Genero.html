@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% load static %}
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+        <title>Género</title>
+        <link rel="stylesheet" href="{% static 'stilos.css' %}">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&display=swap" rel="stylesheet">
+    </head>
+   <body>
+       
+            <header>
+                <h1>All-Music</h1>
+            </header>
+            <nav class="nav_reproductor">
+                <ul>
+                    <li><a href="{% url 'home' %}">Inicio</a> </li>
+                    <li><a href="">Mi musica</a> </li>
+                    <li><a href="">Género</a> </li>
+                    <li><a href="">Pley list</a> </li>
+                </ul>
+            </nav>
+
+
+            <section class="section_genero">
+                {% for genero_li  in list_genero %}
+               
+                <h2> <a class="titulo_genero" href="{% url 'porGenero' genero_li.id %}">{{genero_li.nombre_genero}}</a></h2>
+                        <ol>
+                    {% for musica  in li_musica %}
+                        {% if musica.genero_id == genero_li.id %}
+                            <li><a class="li-Musica" href="{% url 'reproductor' musica.id %}"> {{musica.nombre_cancion}}</a> </li>
+                        
+                          {% endif %}
+                    {% endfor %}  
+                        </ol>
+                      
+                {% endfor %}
+
+                {{parametro_genero}}
+                   
+            </section>
+
+                 
+
+             
+           
+<div class="pie_pagina">
+     <footer>
+        <h4>&copy; Reproductor Musica 2021</h4>
+    </footer> 
+</div>
+   
+
+</body>
+</html>
